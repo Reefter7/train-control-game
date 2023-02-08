@@ -1,0 +1,73 @@
+.noselect {
+-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+	 -moz-user-select: none; /* Old versions of Firefox */
+	  -ms-user-select: none; /* Internet Explorer/Edge */
+		  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+:root {
+	--bgcolor: #1b006b;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+html {
+	color-scheme: dark light;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	background: var(--bgcolor);
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 2vh;
+}
+
+img, picture, svg, video {
+	display: block;
+	max-width: 100%;
+}
+
+#header {
+	position: absolute;
+	top: 0; left: 0; right: 0;
+	height: 6vh;
+	background: rgba(0, 0, 0, 0.567);
+	margin-bottom: 10px;
+}
+
+#main {
+	display: flex;
+	width: 95vw;
+	height: 90vh;
+}
+
+#main > * {
+	border: .5vw solid black;
+	border-radius: 1vw;
+	margin: .2%;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+#main > #playingField {
+	height: 100%; width: 89.9%;
+}
+
+#main > #controls {
+	height: 100%; width: 9.9%;
+}
+#main > #playingField > #playingCanvas {
+	height: 100%; width: 100%;
+}
